@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="DirectPay portal">
+  <meta name="keywords" content="DirectPay, Payment Gateway, IPG">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+  <script src="https://test-gateway.mastercard.com/form/version/46/merchant/DPAYMID/session.js?debug=true"></script>
+  <!-- <script src="https://ap-gateway.mastercard.com/form/version/46/merchant/00061/session.js"></script>  -->
+
+  <script defer src="./assets/assets/js/directpayCardPayment.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <title>DirectPay Portal</title>
+  <!-- <style id="antiClickjack">body{display:contents !important;}</style> -->
+
+  <!-- <script defer src="../lib/screens/signup_process/business_info.dart"></script> -->
+
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    /* #map {
+      height: 50%;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    /* html,
+    body {
+      height: 50%;
+      margin: 0;
+      padding: 0;
+    }  */
+
+    /* loader style */
+    .no-js #loader {
+      display: none;
+    }
+
+    .js #loader {
+      display: block;
+      position: absolute;
+      left: 100px;
+      top: 0;
+    }
+
+    .se-pre-con {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url("./assets/assets/images/dp_loading.gif") center no-repeat #fff;
+      /* end loader style */
+    }
+
+    dialog {
+      border: #fff;
+      padding: 0%;
+      background: transparent;
+      font-family: 'SF Pro Text';
+    }
+
+    /* Credit Card */
+    .credit-card {
+      width: 360px;
+      /* height: 400px; */
+      /* margin: 60px auto 0; */
+      padding: 10px 10px 10px 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background-color: #fdfdfd;
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .10);
+    }
+
+    img.img-logo {
+      vertical-align: middle;
+      max-width: 55px;
+    }
+
+    /* Common */
+    .card-name,
+    .card-number,
+    .cvv-input,
+    .month select,
+    .year select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 0 0 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    /* Date Field */
+    .month select,
+    .year select {
+      width: 145px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      border: 2px solid #e1e8ee;
+      border-radius: 6px;
+      /* background: url('caret.png') no-repeat; */
+      background-position: 85% 50%;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    .month select {
+      float: left;
+    }
+
+    .year select {
+      float: right;
+    }
+
+    /* Buttons Section */
+
+    .close-btn {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      /* width: 100%; */
+      border-color: transparent;
+      border-radius: 6px;
+      margin: 8px 0 0 0;
+      /* height: 44px; */
+    }
+
+    .proceed-btn {
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      border-color: transparent;
+      border-radius: 6px;
+      margin: 8px 0 0 0;
+      height: 44px;
+    }
+
+    .proceed-btn {
+      margin-bottom: 10px;
+      background: #005AF0;
+    }
+
+    .proceed-btn a {
+      text-decoration: none;
+    }
+
+    .proceed-btn a {
+      color: #fff;
+    }
+
+
+
+    /* dialog {
+      padding: 10px;
+      border: 0;
+      border-radius: 0.6rem;
+      box-shadow: 0 0 1em blue;
+    } */
+
+    /* dialog::backdrop {
+      background-color: rgba(0, 0, 0, 0.4);
+    } */
+  </style>
+  <script>
+
+    function removeLoading() {
+      document.getElementById("loading").style.display = "none";
+    }
+  </script>
+
+  <script defer src="main.dart.js" type="application/javascript"></script>
+</head>
+
+
+<body id="app-container">
+  <div id="loading" class="se-pre-con"></div>
+  <div id="map"></div>
+  <div id="card_container"></div>
+
+</body>
+
+</html>
